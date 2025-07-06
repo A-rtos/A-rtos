@@ -17,7 +17,7 @@
  * @param  argument: Not used
  * @retval None
  */
-void rcTask(void *argument)
+void taskRC(void *argument)
 {
     sbusStart();
 	timStart();

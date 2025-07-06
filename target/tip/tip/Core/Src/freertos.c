@@ -84,9 +84,9 @@ const osEventFlagsAttr_t imu_event_attributes = {
 
 /* USER CODE END FunctionPrototypes */
 
-void shellTask(void *argument);
-extern void imuTask(void *argument);
-extern void rcTask(void *argument);
+void taskShell(void *argument);
+extern void taskIMU(void *argument);
+extern void taskRC(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -121,13 +121,13 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* creation of shell */
-  shellHandle = osThreadNew(shellTask, NULL, &shell_attributes);
+  shellHandle = osThreadNew(taskShell, NULL, &shell_attributes);
 
   /* creation of imu */
-  imuHandle = osThreadNew(imuTask, NULL, &imu_attributes);
+  imuHandle = osThreadNew(taskIMU, NULL, &imu_attributes);
 
   /* creation of rc */
-  rcHandle = osThreadNew(rcTask, NULL, &rc_attributes);
+  rcHandle = osThreadNew(taskRC, NULL, &rc_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -142,22 +142,22 @@ void MX_FREERTOS_Init(void) {
 
 }
 
-/* USER CODE BEGIN Header_shellTask */
+/* USER CODE BEGIN Header_taskShell */
 /**
   * @brief  Function implementing the shell thread.
   * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_shellTask */
-void shellTask(void *argument)
+/* USER CODE END Header_taskShell */
+void taskShell(void *argument)
 {
-  /* USER CODE BEGIN shellTask */
+  /* USER CODE BEGIN taskShell */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END shellTask */
+  /* USER CODE END taskShell */
 }
 
 /* Private application code --------------------------------------------------*/

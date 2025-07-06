@@ -46,9 +46,9 @@ const osEventFlagsAttr_t imu_event_attributes = {
 };
 
 /* Private function prototypes -----------------------------------------------*/
-extern void shellTask(void *argument);
-extern void imuTask(void *argument);
-extern void rcTask(void *argument);
+extern void taskShell(void *argument);
+extern void taskIMU(void *argument);
+extern void taskRC(void *argument);
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -66,10 +66,10 @@ void osThreadInitialize(void)
     // shellHandle = osThreadNew(shellTask, NULL, &shell_attributes);
 
 	/* creation of imu */
-	imuHandle = osThreadNew(imuTask, NULL, &imu_attributes);
+	imuHandle = osThreadNew(taskIMU, NULL, &imu_attributes);
 	
 	/* creation of rc */
-	rcHandle = osThreadNew(rcTask, NULL, &rc_attributes);
+	rcHandle = osThreadNew(taskRC, NULL, &rc_attributes);
 	
 	/* Create the mutex(es) */
 	/* creation of shell_mutex */

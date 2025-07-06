@@ -38,7 +38,7 @@ void imuTempCtrl(pid_t *pid);
  * @brief	imu任务, 初始化 bmi088, ist8310, 计算欧拉角
  * @param	argument: NULL
  */
-void imuTask(void *argument)
+void taskIMU(void *argument)
 {
 	bmi088Init();  // 初始化BMI088
     ist8310Init(); // 初始化IST8310

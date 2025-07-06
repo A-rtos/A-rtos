@@ -26,14 +26,14 @@ typedef struct
 	uint16_t ch14; // 通道14数值
 	uint16_t ch15; // 通道15数值
 	uint16_t ch16; // 通道16数值
-} sbus_t;
+} Sbus_t;
 
-extern sbus_t sbus_ch;
+extern Sbus_t sbus_ch;
 extern uint16_t command[16];
 
 /* Exported functions prototypes ---------------------------------------------*/
 void sbusStart(void);
-sbus_t *sbusChGet(void);
+Sbus_t *sbusChGet(void);
 uint16_t sbus2pwm(uint16_t sbus_value);
 
 #endif

@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    tp_config.h
+  * @file    ar_config.h
   * @author  TP-Thread
   * @brief   Application specific definitions.
   *          These definitions should be adjusted for your particular hardware and application requirements.
@@ -8,8 +8,8 @@
   */ 
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef TP_CONFIG_H
-#define TP_CONFIG_H
+#ifndef AR_CONFIG_H
+#define AR_CONFIG_H
 
 /* Includes ------------------------------------------------------------------*/
 #include "SEGGER_SYSVIEW_ARTOS.h"
@@ -135,4 +135,4 @@ standard names. */
 /* Section where parameter definitions can be added (for instance, to override default ones in FreeRTOS.h) */
 /* USER CODE END Defines */
 
-#endif /* TP_CONFIG_H */
+#endif /* AR_CONFIG_H */

@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    tp_define.h
+  * @file    ar_define.h
   * @author  TP-Thread
   * @brief   Application specific definitions.
   *          These definitions should be adjusted for your particular hardware and application requirements.
@@ -8,8 +8,8 @@
   */ 
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef TP_DEFINE_H
-#define TP_DEFINE_H
+#ifndef AR_DEFINE_H
+#define AR_DEFINE_H
 
 /*
  * Include the generic headers required for the FreeRTOS port being used.
@@ -1274,4 +1274,4 @@ typedef StaticStreamBuffer_t StaticMessageBuffer_t;
 }
 #endif
 
-#endif /* TP_DEFINE_H */
+#endif /* AR_DEFINE_H */

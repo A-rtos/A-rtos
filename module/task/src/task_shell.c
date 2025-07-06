@@ -101,7 +101,7 @@ int userShellUnlock(Shell *shell)
  * @param param 参数(shell对象)
  * 
  */
-void shellTask(void *argument)
+void taskShell(void *argument)
 {
     shell.write = userShellWrite;
     shell.read = userShellRead;

@@ -29,7 +29,7 @@
 uint8_t sbus_buf[25]; 
 uint8_t sbus_state;	  // 遥控器与接收器连接状态 0=未连接，1=正常连接
 
-sbus_t sbus_ch; // 遥控器通道数据
+Sbus_t sbus_ch; // 遥控器通道数据
 uint16_t command[16]; // 遥控器通道数据转换成PWM值
 
 /* Private function prototypes -----------------------------------------------*/
@@ -49,7 +49,7 @@ void sbusStart(void)
  * @brief	获取遥控器数据指针
  * @retval	遥控器数据指针
  */
-sbus_t *sbusChGet(void)
+Sbus_t *sbusChGet(void)
 {
 	return &sbus_ch;
 }
