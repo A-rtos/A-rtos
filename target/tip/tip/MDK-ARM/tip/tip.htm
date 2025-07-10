@@ -3,7 +3,7 @@
 <title>Static Call Graph - [tip\tip.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image tip\tip.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Jul 06 12:29:50 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Jul 10 22:34:06 2025
 <BR><P>
 <H3>Maximum Stack Usage =        344 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -453,10 +453,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[10f]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataFromQueue
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteSkipNoLock
+<BR><BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteSkipNoLock
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_ReadNoLock
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataFromQueue
 </UL>
 
 <P><STRONG><a name="[1de]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
@@ -517,9 +517,9 @@ Global Symbols
 <P><STRONG><a name="[12b]"></a>memcmp</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, memcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = memcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+<BR>[Called By]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSVIEW_AddTask
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSwitchContext
-<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSVIEW_AddTask
 </UL>
 
 <P><STRONG><a name="[1b9]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
@@ -882,12 +882,12 @@ Global Symbols
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Init
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Write
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
@@ -1002,8 +1002,8 @@ Global Symbols
 <P><STRONG><a name="[bf]"></a>HAL_RCC_ClockConfig</STRONG> (Thumb, 288 bytes, Stack size 32 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_TIM_Base_Init &rArr; TIM_Base_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
@@ -1591,12 +1591,12 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SendPacket
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskRemoveFromUnorderedEventList
+<BR>[Called By]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskRemoveFromUnorderedEventList
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
 <LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 </UL>
 
 <P><STRONG><a name="[11a]"></a>SEGGER_SYSVIEW_RecordSystime</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, segger_sysview.o(i.SEGGER_SYSVIEW_RecordSystime))
@@ -1615,9 +1615,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SendPacket
 </UL>
-<BR>[Called By]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordSystime
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordSystime
 </UL>
 
 <P><STRONG><a name="[11b]"></a>SEGGER_SYSVIEW_RecordU32x2</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, segger_sysview.o(i.SEGGER_SYSVIEW_RecordU32x2))
@@ -1626,9 +1626,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SendPacket
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSendFromISR
+<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordSystime
+<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSendFromISR
 <LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueueAddToRegistry
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordSystime
 </UL>
 
 <P><STRONG><a name="[11d]"></a>SEGGER_SYSVIEW_RecordU32x3</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, segger_sysview.o(i.SEGGER_SYSVIEW_RecordU32x3))
@@ -1654,8 +1654,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SendPacket
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventListRestricted
-<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_Start
+<BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_Start
+<LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventListRestricted
 </UL>
 
 <P><STRONG><a name="[120]"></a>SEGGER_SYSVIEW_SendModule</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, segger_sysview.o(i.SEGGER_SYSVIEW_SendModule))
@@ -1872,10 +1872,10 @@ Global Symbols
 <P><STRONG><a name="[14f]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcRemoteCtrl
+<BR>[Called By]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcRemoteCtrl
 <LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmi088GyroInit
 <LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmi088AccelInit
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test
 </UL>
 
 <P><STRONG><a name="[1ed]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
@@ -2627,16 +2627,16 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[16e]"></a>uxListRemove</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, list.o(i.uxListRemove))
-<BR><BR>[Called By]<UL><LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskRemoveFromUnorderedEventList
-<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
-<LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
-<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSwitchTimerLists
+<BR><BR>[Called By]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSwitchTimerLists
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvProcessTimerOrBlockTask
 <LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvProcessReceivedCommands
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
 <LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskRemoveFromUnorderedEventList
+<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 
 <P><STRONG><a name="[142]"></a>uxTaskGetStackHighWaterMark</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, task.o(i.uxTaskGetStackHighWaterMark))
@@ -2665,11 +2665,11 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> event.o(i.xEventGroupSetBitsFromISR)
 </UL>
 <P><STRONG><a name="[173]"></a>vListInitialise</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, list.o(i.vListInitialise))
-<BR><BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<BR><BR>[Called By]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
 <LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xEventGroupCreateStatic
 <LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xEventGroupCreate
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 </UL>
 
 <P><STRONG><a name="[181]"></a>vListInitialiseItem</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, list.o(i.vListInitialiseItem))
@@ -2679,26 +2679,29 @@ Global Symbols
 <P><STRONG><a name="[170]"></a>vListInsert</STRONG> (Thumb, 48 bytes, Stack size 12 bytes, list.o(i.vListInsert))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = vListInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
-<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSwitchTimerLists
+<BR>[Called By]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSwitchTimerLists
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertTimerInActiveList
 <LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 </UL>
 
 <P><STRONG><a name="[16f]"></a>vListInsertEnd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, list.o(i.vListInsertEnd))
-<BR><BR>[Called By]<UL><LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskRemoveFromUnorderedEventList
+<BR><BR>[Called By]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskRemoveFromUnorderedEventList
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnUnorderedEventList
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
 <LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventListRestricted
 <LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
 </UL>
 
 <P><STRONG><a name="[172]"></a>vPortEnterCritical</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, port.o(i.vPortEnterCritical))
-<BR><BR>[Called By]<UL><LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<BR><BR>[Called By]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
@@ -2707,13 +2710,13 @@ Global Symbols
 <LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueueWaitForMessageRestricted
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
 <LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 </UL>
 
 <P><STRONG><a name="[174]"></a>vPortExitCritical</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, port.o(i.vPortExitCritical))
-<BR><BR>[Called By]<UL><LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<BR><BR>[Called By]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
@@ -2722,9 +2725,6 @@ Global Symbols
 <LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueueWaitForMessageRestricted
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
 <LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 </UL>
 
 <P><STRONG><a name="[17b]"></a>vPortFree</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, heap_4.o(i.vPortFree))
@@ -2734,9 +2734,9 @@ Global Symbols
 <LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
-<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvProcessReceivedCommands
+<BR>[Called By]<UL><LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvProcessReceivedCommands
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 </UL>
 
 <P><STRONG><a name="[1cd]"></a>vPortSetupTimerInterrupt</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, port.o(i.vPortSetupTimerInterrupt))
@@ -2758,8 +2758,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_ShrinkId
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32x2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexNew
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
+<BR>[Called By]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexNew
 </UL>
 
 <P><STRONG><a name="[18c]"></a>vQueueWaitForMessageRestricted</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, queue.o(i.vQueueWaitForMessageRestricted))
@@ -2776,10 +2776,10 @@ Global Symbols
 <P><STRONG><a name="[15d]"></a>vTaskDelay</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, task.o(i.vTaskDelay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; SEGGER_SYSVIEW_OnTaskStartReady &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 <LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 </UL>
@@ -2797,8 +2797,8 @@ Global Symbols
 <P><STRONG><a name="[1c4]"></a>vTaskPlaceOnEventList</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, task.o(i.vTaskPlaceOnEventList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
 </UL>
 <BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
@@ -2807,9 +2807,9 @@ Global Symbols
 <P><STRONG><a name="[1c3]"></a>vTaskPlaceOnEventListRestricted</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, task.o(i.vTaskPlaceOnEventListRestricted))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = vTaskPlaceOnEventListRestricted &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordVoid
+<BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordVoid
 <LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueueWaitForMessageRestricted
 </UL>
@@ -2817,8 +2817,8 @@ Global Symbols
 <P><STRONG><a name="[1c5]"></a>vTaskPlaceOnUnorderedEventList</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, task.o(i.vTaskPlaceOnUnorderedEventList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = vTaskPlaceOnUnorderedEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xEventGroupWaitBits
 </UL>
@@ -2826,9 +2826,9 @@ Global Symbols
 <P><STRONG><a name="[1c6]"></a>vTaskRemoveFromUnorderedEventList</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, task.o(i.vTaskRemoveFromUnorderedEventList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = vTaskRemoveFromUnorderedEventList &rArr; SEGGER_SYSVIEW_OnTaskStartReady &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
 </UL>
 <BR>[Called By]<UL><LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xEventGroupSetBits
 </UL>
@@ -2836,26 +2836,26 @@ Global Symbols
 <P><STRONG><a name="[165]"></a>vTaskStartScheduler</STRONG> (Thumb, 144 bytes, Stack size 40 bytes, task.o(i.vTaskStartScheduler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = vTaskStartScheduler &rArr; xTimerCreateTimerTask &rArr; xTaskCreateStatic &rArr; prvAddNewTaskToReadyList &rArr; SYSVIEW_AddTask &rArr; SYSVIEW_SendTaskInfo &rArr; SEGGER_SYSVIEW_SendTaskInfo &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationGetIdleTaskMemory
-<LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
-<LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
-<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerCreateTimerTask
+<BR>[Calls]<UL><LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerCreateTimerTask
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartExec
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnIdle
+<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationGetIdleTaskMemory
+<LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
+<LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelStart
 </UL>
 
 <P><STRONG><a name="[18a]"></a>vTaskSuspendAll</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, task.o(i.vTaskSuspendAll))
-<BR><BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<BR><BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvProcessTimerOrBlockTask
+<LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xEventGroupWaitBits
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xEventGroupSetBits
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 <LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
-<LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvProcessTimerOrBlockTask
 </UL>
 
 <P><STRONG><a name="[7e]"></a>vTaskSwitchContext</STRONG> (Thumb, 120 bytes, Stack size 8 bytes, task.o(i.vTaskSwitchContext))
@@ -2892,8 +2892,8 @@ Global Symbols
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 </UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vEventGroupSetBitsCallback
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osEventFlagsSet
+<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osEventFlagsSet
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vEventGroupSetBitsCallback
 </UL>
 
 <P><STRONG><a name="[161]"></a>xEventGroupSetBitsFromISR</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, event.o(i.xEventGroupSetBitsFromISR))
@@ -2969,8 +2969,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
+<BR>[Called By]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
 </UL>
 
 <P><STRONG><a name="[17f]"></a>xQueueGenericReset</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, queue.o(i.xQueueGenericReset))
@@ -3053,10 +3053,10 @@ Global Symbols
 <P><STRONG><a name="[16c]"></a>xTaskCreate</STRONG> (Thumb, 90 bytes, Stack size 56 bytes, task.o(i.xTaskCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = xTaskCreate &rArr; prvAddNewTaskToReadyList &rArr; SYSVIEW_AddTask &rArr; SYSVIEW_SendTaskInfo &rArr; SEGGER_SYSVIEW_SendTaskInfo &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
-<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+<BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 <LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadNew
 </UL>
@@ -3067,9 +3067,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 <LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+<BR>[Called By]<UL><LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerCreateTimerTask
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadNew
-<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerCreateTimerTask
 </UL>
 
 <P><STRONG><a name="[12d]"></a>xTaskGetSchedulerState</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, task.o(i.xTaskGetSchedulerState))
@@ -3095,10 +3095,10 @@ Global Symbols
 <P><STRONG><a name="[1d0]"></a>xTaskIncrementTick</STRONG> (Thumb, 198 bytes, Stack size 24 bytes, task.o(i.xTaskIncrementTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = xTaskIncrementTick &rArr; SEGGER_SYSVIEW_OnTaskStartReady &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
 <LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortSysTickHandler
@@ -3107,10 +3107,10 @@ Global Symbols
 <P><STRONG><a name="[179]"></a>xTaskPriorityDisinherit</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, task.o(i.xTaskPriorityDisinherit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = xTaskPriorityDisinherit &rArr; SEGGER_SYSVIEW_OnTaskStartReady &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
 </UL>
 <BR>[Called By]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
 </UL>
@@ -3118,9 +3118,9 @@ Global Symbols
 <P><STRONG><a name="[190]"></a>xTaskRemoveFromEventList</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, task.o(i.xTaskRemoveFromEventList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = xTaskRemoveFromEventList &rArr; SEGGER_SYSVIEW_OnTaskStartReady &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
 </UL>
 <BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 <LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSendFromISR
@@ -3132,30 +3132,30 @@ Global Symbols
 <P><STRONG><a name="[18b]"></a>xTaskResumeAll</STRONG> (Thumb, 186 bytes, Stack size 32 bytes, task.o(i.xTaskResumeAll))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = xTaskResumeAll &rArr; xTaskIncrementTick &rArr; SEGGER_SYSVIEW_OnTaskStartReady &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
+<LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 <LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
-<LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
 </UL>
-<BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
+<BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvProcessTimerOrBlockTask
+<LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xEventGroupWaitBits
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xEventGroupSetBits
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 <LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
-<LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvProcessTimerOrBlockTask
 </UL>
 
 <P><STRONG><a name="[1c8]"></a>xTimerCreateTimerTask</STRONG> (Thumb, 78 bytes, Stack size 32 bytes, timer.o(i.xTimerCreateTimerTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = xTimerCreateTimerTask &rArr; xTaskCreateStatic &rArr; prvAddNewTaskToReadyList &rArr; SYSVIEW_AddTask &rArr; SYSVIEW_SendTaskInfo &rArr; SEGGER_SYSVIEW_SendTaskInfo &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationGetTimerTaskMemory
+<BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationGetTimerTaskMemory
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckForValidListAndQueue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 </UL>
@@ -3276,13 +3276,13 @@ Local Symbols
 <P><STRONG><a name="[171]"></a>prvAddNewTaskToReadyList</STRONG> (Thumb, 222 bytes, Stack size 24 bytes, task.o(i.prvAddNewTaskToReadyList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = prvAddNewTaskToReadyList &rArr; SYSVIEW_AddTask &rArr; SYSVIEW_SendTaskInfo &rArr; SEGGER_SYSVIEW_SendTaskInfo &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
+<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSVIEW_AddTask
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskCreate
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
 <LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
-<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSVIEW_AddTask
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskCreate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
 <LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
@@ -3299,10 +3299,10 @@ Local Symbols
 <P><STRONG><a name="[67]"></a>prvIdleTask</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, task.o(i.prvIdleTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = prvIdleTask &rArr; prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; SEGGER_SYSVIEW_OnTaskStartReady &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<BR>[Calls]<UL><LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> task.o(i.vTaskStartScheduler)
 </UL>
@@ -3350,12 +3350,12 @@ Local Symbols
 <P><STRONG><a name="[185]"></a>prvProcessReceivedCommands</STRONG> (Thumb, 248 bytes, Stack size 48 bytes, timer.o(i.prvProcessReceivedCommands))
 <BR><BR>[Stack]<UL><LI>Max Depth = 344<LI>Call Chain = prvProcessReceivedCommands &rArr; prvSampleTimeNow &rArr; prvSwitchTimerLists &rArr; xTimerGenericCommand &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; SEGGER_SYSVIEW_OnTaskStartReady &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerGenericCommand
+<BR>[Calls]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSampleTimeNow
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertTimerInActiveList
+<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerGenericCommand
 <LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 <LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSampleTimeNow
-<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertTimerInActiveList
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvTimerTask
 </UL>
@@ -3363,13 +3363,13 @@ Local Symbols
 <P><STRONG><a name="[189]"></a>prvProcessTimerOrBlockTask</STRONG> (Thumb, 182 bytes, Stack size 32 bytes, timer.o(i.prvProcessTimerOrBlockTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = prvProcessTimerOrBlockTask &rArr; prvSampleTimeNow &rArr; prvSwitchTimerLists &rArr; xTimerGenericCommand &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; SEGGER_SYSVIEW_OnTaskStartReady &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerGenericCommand
+<BR>[Calls]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSampleTimeNow
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertTimerInActiveList
+<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerGenericCommand
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 <LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueueWaitForMessageRestricted
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSampleTimeNow
-<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertTimerInActiveList
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvTimerTask
 </UL>
@@ -3377,8 +3377,8 @@ Local Symbols
 <P><STRONG><a name="[186]"></a>prvSampleTimeNow</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, timer.o(i.prvSampleTimeNow))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = prvSampleTimeNow &rArr; prvSwitchTimerLists &rArr; xTimerGenericCommand &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; SEGGER_SYSVIEW_OnTaskStartReady &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetTickCount
-<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSwitchTimerLists
+<BR>[Calls]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSwitchTimerLists
+<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetTickCount
 </UL>
 <BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvProcessTimerOrBlockTask
 <LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvProcessReceivedCommands
@@ -3561,11 +3561,7 @@ Local Symbols
 <LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HandleIncomingPacket
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_RTT_WriteSkipNoLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32x4
-<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32x3
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32x2
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordVoid
+<BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordVoid
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartReady
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskStartExec
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_OnTaskCreate
@@ -3578,6 +3574,10 @@ Local Symbols
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_SendNumModules
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_SendModule
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_GetSysDesc
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32x4
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32x3
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32x2
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SEGGER_SYSVIEW_RecordU32
 </UL>
 
 <P><STRONG><a name="[135]"></a>_TrySendOverflowPacket</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, segger_sysview.o(i._TrySendOverflowPacket))
@@ -3598,8 +3598,8 @@ Local Symbols
 <P><STRONG><a name="[6b]"></a>_cbSendTaskList</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, segger_sysview_artos.o(i._cbSendTaskList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = _cbSendTaskList &rArr; SYSVIEW_SendTaskInfo &rArr; SEGGER_SYSVIEW_SendTaskInfo &rArr; _SendPacket &rArr; _HandleIncomingPacket &rArr; SEGGER_SYSVIEW_Start &rArr;  _SendPacket (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxTaskGetStackHighWaterMark
-<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSVIEW_SendTaskInfo
+<BR>[Calls]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSVIEW_SendTaskInfo
+<LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxTaskGetStackHighWaterMark
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> segger_sysview_artos.o(.constdata)
 </UL>

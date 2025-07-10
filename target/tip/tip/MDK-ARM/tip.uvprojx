@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../../../../artos/artos/inc;../../../../artos/threadshell/inc;../../../../artos/systemview/inc;../../../../module/driver/inc;../../../../module/protocol/inc;../../../../module/algorithm/inc;../../../../module/task/inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../../../../artos/artos/inc;..\..\..\..\artos\ashell\inc;..\..\..\..\artos\sysview\inc;../../../../module/driver/inc;../../../../module/protocol/inc;../../../../module/algorithm/inc;../../../../module/task/inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -764,52 +764,52 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Middlewares/ThreadShell</GroupName>
+          <GroupName>Middlewares/Ashell</GroupName>
           <Files>
             <File>
               <FileName>shell.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\artos\threadshell\src\shell.c</FilePath>
+              <FilePath>..\..\..\..\artos\ashell\src\shell.c</FilePath>
             </File>
             <File>
               <FileName>shell_cmd_list.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\artos\threadshell\src\shell_cmd_list.c</FilePath>
+              <FilePath>..\..\..\..\artos\ashell\src\shell_cmd_list.c</FilePath>
             </File>
             <File>
               <FileName>shell_companion.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\artos\threadshell\src\shell_companion.c</FilePath>
+              <FilePath>..\..\..\..\artos\ashell\src\shell_companion.c</FilePath>
             </File>
             <File>
               <FileName>shell_ext.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\artos\threadshell\src\shell_ext.c</FilePath>
+              <FilePath>..\..\..\..\artos\ashell\src\shell_ext.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Middlewares/SystemView</GroupName>
+          <GroupName>Middlewares/SysView</GroupName>
           <Files>
             <File>
               <FileName>SEGGER_RTT.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\artos\systemview\src\SEGGER_RTT.c</FilePath>
+              <FilePath>..\..\..\..\artos\sysview\src\SEGGER_RTT.c</FilePath>
             </File>
             <File>
               <FileName>SEGGER_SYSVIEW.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\artos\systemview\src\SEGGER_SYSVIEW.c</FilePath>
+              <FilePath>..\..\..\..\artos\sysview\src\SEGGER_SYSVIEW.c</FilePath>
             </File>
             <File>
               <FileName>SEGGER_SYSVIEW_ARTOS.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\artos\systemview\src\SEGGER_SYSVIEW_ARTOS.c</FilePath>
+              <FilePath>..\..\..\..\artos\sysview\src\SEGGER_SYSVIEW_ARTOS.c</FilePath>
             </File>
             <File>
               <FileName>SEGGER_SYSVIEW_Config_ARTOS.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\artos\systemview\src\SEGGER_SYSVIEW_Config_ARTOS.c</FilePath>
+              <FilePath>..\..\..\..\artos\sysview\src\SEGGER_SYSVIEW_Config_ARTOS.c</FilePath>
             </File>
           </Files>
         </Group>

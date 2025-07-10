@@ -711,7 +711,7 @@
   </Group>
 
   <Group>
-    <GroupName>Middlewares/ThreadShell</GroupName>
+    <GroupName>Middlewares/Ashell</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -723,7 +723,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\artos\threadshell\src\shell.c</PathWithFileName>
+      <PathWithFileName>..\..\..\..\artos\ashell\src\shell.c</PathWithFileName>
       <FilenameWithoutPath>shell.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -735,7 +735,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\artos\threadshell\src\shell_cmd_list.c</PathWithFileName>
+      <PathWithFileName>..\..\..\..\artos\ashell\src\shell_cmd_list.c</PathWithFileName>
       <FilenameWithoutPath>shell_cmd_list.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -747,7 +747,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\artos\threadshell\src\shell_companion.c</PathWithFileName>
+      <PathWithFileName>..\..\..\..\artos\ashell\src\shell_companion.c</PathWithFileName>
       <FilenameWithoutPath>shell_companion.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -759,7 +759,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\artos\threadshell\src\shell_ext.c</PathWithFileName>
+      <PathWithFileName>..\..\..\..\artos\ashell\src\shell_ext.c</PathWithFileName>
       <FilenameWithoutPath>shell_ext.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -767,7 +767,7 @@
   </Group>
 
   <Group>
-    <GroupName>Middlewares/SystemView</GroupName>
+    <GroupName>Middlewares/SysView</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -779,7 +779,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\artos\systemview\src\SEGGER_RTT.c</PathWithFileName>
+      <PathWithFileName>..\..\..\..\artos\sysview\src\SEGGER_RTT.c</PathWithFileName>
       <FilenameWithoutPath>SEGGER_RTT.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -791,7 +791,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\artos\systemview\src\SEGGER_SYSVIEW.c</PathWithFileName>
+      <PathWithFileName>..\..\..\..\artos\sysview\src\SEGGER_SYSVIEW.c</PathWithFileName>
       <FilenameWithoutPath>SEGGER_SYSVIEW.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -803,7 +803,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\artos\systemview\src\SEGGER_SYSVIEW_ARTOS.c</PathWithFileName>
+      <PathWithFileName>..\..\..\..\artos\sysview\src\SEGGER_SYSVIEW_ARTOS.c</PathWithFileName>
       <FilenameWithoutPath>SEGGER_SYSVIEW_ARTOS.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -815,7 +815,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\artos\systemview\src\SEGGER_SYSVIEW_Config_ARTOS.c</PathWithFileName>
+      <PathWithFileName>..\..\..\..\artos\sysview\src\SEGGER_SYSVIEW_Config_ARTOS.c</PathWithFileName>
       <FilenameWithoutPath>SEGGER_SYSVIEW_Config_ARTOS.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
