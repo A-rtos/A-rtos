@@ -1,9 +1,9 @@
 tip\list.o: ..\..\..\..\artos\artos\src\list.c
 tip\list.o: D:\EIDE\MDK\ARM\ARMCC\Bin\..\include\stdlib.h
-tip\list.o: ../../../../artos/artos/inc/ar_define.h
+tip\list.o: ..\..\..\..\artos\artos\inc\ar_define.h
 tip\list.o: D:\EIDE\MDK\ARM\ARMCC\Bin\..\include\stddef.h
 tip\list.o: D:\EIDE\MDK\ARM\ARMCC\Bin\..\include\stdint.h
-tip\list.o: ../../../../artos/artos/inc/ar_config.h
+tip\list.o: ..\..\..\..\artos\artos\inc\ar_config.h
 tip\list.o: ..\..\..\..\artos\sysview\inc\SEGGER_SYSVIEW_ARTOS.h
 tip\list.o: ..\..\..\..\artos\sysview\inc\SEGGER_SYSVIEW.h
 tip\list.o: ..\..\..\..\artos\sysview\inc\SEGGER.h
@@ -12,9 +12,9 @@ tip\list.o: ..\..\..\..\artos\sysview\inc\Global.h
 tip\list.o: ..\..\..\..\artos\sysview\inc\SEGGER_SYSVIEW_ConfDefaults.h
 tip\list.o: ..\..\..\..\artos\sysview\inc\SEGGER_SYSVIEW_Conf.h
 tip\list.o: ..\..\..\..\artos\sysview\inc\SEGGER_RTT_Conf.h
-tip\list.o: ../../../../artos/artos/inc/projdefs.h
-tip\list.o: ../../../../artos/artos/inc/portable.h
-tip\list.o: ../../../../artos/artos/inc/deprecated_definitions.h
-tip\list.o: ../../../../artos/artos/inc/portmacro.h
-tip\list.o: ../../../../artos/artos/inc/mpu_wrappers.h
-tip\list.o: ../../../../artos/artos/inc/list.h
+tip\list.o: ..\..\..\..\artos\artos\inc\projdefs.h
+tip\list.o: ..\..\..\..\artos\artos\inc\portable.h
+tip\list.o: ..\..\..\..\artos\artos\inc\deprecated_definitions.h
+tip\list.o: ..\..\..\..\artos\artos\inc\portmacro.h
+tip\list.o: ..\..\..\..\artos\artos\inc\mpu_wrappers.h
+tip\list.o: ..\..\..\..\artos\artos\inc\list.h

@@ -39,8 +39,8 @@ tip\shell_cmd_list.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 tip\shell_cmd_list.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 tip\shell_cmd_list.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 tip\shell_cmd_list.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-tip\shell_cmd_list.o: ../../../../artos/artos/inc/ar_define.h
-tip\shell_cmd_list.o: ../../../../artos/artos/inc/ar_config.h
+tip\shell_cmd_list.o: ..\..\..\..\artos\artos\inc\ar_define.h
+tip\shell_cmd_list.o: ..\..\..\..\artos\artos\inc\ar_config.h
 tip\shell_cmd_list.o: ..\..\..\..\artos\sysview\inc\SEGGER_SYSVIEW_ARTOS.h
 tip\shell_cmd_list.o: ..\..\..\..\artos\sysview\inc\SEGGER_SYSVIEW.h
 tip\shell_cmd_list.o: ..\..\..\..\artos\sysview\inc\SEGGER.h
@@ -49,8 +49,8 @@ tip\shell_cmd_list.o: ..\..\..\..\artos\sysview\inc\Global.h
 tip\shell_cmd_list.o: ..\..\..\..\artos\sysview\inc\SEGGER_SYSVIEW_ConfDefaults.h
 tip\shell_cmd_list.o: ..\..\..\..\artos\sysview\inc\SEGGER_SYSVIEW_Conf.h
 tip\shell_cmd_list.o: ..\..\..\..\artos\sysview\inc\SEGGER_RTT_Conf.h
-tip\shell_cmd_list.o: ../../../../artos/artos/inc/projdefs.h
-tip\shell_cmd_list.o: ../../../../artos/artos/inc/portable.h
-tip\shell_cmd_list.o: ../../../../artos/artos/inc/deprecated_definitions.h
-tip\shell_cmd_list.o: ../../../../artos/artos/inc/portmacro.h
-tip\shell_cmd_list.o: ../../../../artos/artos/inc/mpu_wrappers.h
+tip\shell_cmd_list.o: ..\..\..\..\artos\artos\inc\projdefs.h
+tip\shell_cmd_list.o: ..\..\..\..\artos\artos\inc\portable.h
+tip\shell_cmd_list.o: ..\..\..\..\artos\artos\inc\deprecated_definitions.h
+tip\shell_cmd_list.o: ..\..\..\..\artos\artos\inc\portmacro.h
+tip\shell_cmd_list.o: ..\..\..\..\artos\artos\inc\mpu_wrappers.h
